@@ -115,9 +115,10 @@ body{
     color: #730a41;
 }
 .index-img {
+    /*aspect-ratio: 656 / 1065;*/
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: -68px;
     z-index: 1;
     height: 95%;
     max-height: 1050px;
