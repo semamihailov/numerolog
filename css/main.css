@@ -13,7 +13,7 @@ body{
     align-items: center;
     justify-content: center;
     border-radius: 100px;
-    background: linear-gradient(90deg, #d30498, #ff4680);
+    background: linear-gradient(90deg, #ff5b9d 0%, #c2035c 100%);
     background-size: 200% 100%;
     background-position: 0 0;
     transition: background-position 0.3s ease;
@@ -50,13 +50,13 @@ body{
     font-size: 60px;
     line-height: 125%;
     text-transform: uppercase;
-    color: #ffebfc;
+    color: #92027A;
     margin-bottom: 50px;
 }
 .index-buttons {
     max-width: 552px;
     border-radius: 30px;
-    background: #ff9fe3;
+    background: #ff9bc6;
     opacity: 0.75;
     padding: 35px;
     display: flex;
@@ -71,7 +71,7 @@ body{
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px); /* для iOS Safari */
 
-    background: #ff9fe3;
+    background: #FF9BC6;
     opacity: 0.75;
 
     display: flex;
@@ -85,7 +85,7 @@ body{
     display: flex;
     align-items: center;
     column-gap: 14px;
-    background: #ff9fe3;
+    background: #FF9BC6;
     max-width: 238px;
     box-shadow: 4px 2px 10px 0 rgba(87, 9, 77, 0.5);
     margin-right: 30px;
@@ -127,7 +127,7 @@ body{
     font-weight: 800;
     font-size: 24px;
     text-align: center;
-    color: #ffebfc;
+    color: #92027A;
     max-width: 552px;
 }
 
