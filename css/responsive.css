@@ -140,7 +140,7 @@
         left: 50%;
         transform: translateX(-50%);
     }
-    .soul-content:last-child{
+    .soul-content.last{
         margin-top: 40px;
     }
     .button{
