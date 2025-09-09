@@ -37,7 +37,20 @@
     }
     .button{
         padding: 17px 0;
-        font-size: 18px;
+        font-size: 16px;
+    }
+    .input {
+        padding: 17px 0;
+        font-size: 16px;
+        max-height: 48px;
+        margin-bottom: 15px;
+    }
+
+    .input::placeholder {
+        font-size: 16px;
+    }
+    .table-button{
+        max-width: 300px;
     }
 }
 @media screen and (max-width: 1023px){
@@ -127,14 +140,70 @@
         left: 50%;
         transform: translateX(-50%);
     }
-
+    .soul-content:last-child{
+        margin-top: 40px;
+    }
     .button{
+        padding: 14px 0;
         font-family: var(--font-family);
         font-weight: 700;
         font-size: 14px;
         text-transform: uppercase;
         text-align: center;
         color: #fff;
+    }
+    .input{
+        padding: 12px 0;
+        font-size: 14px;
+    }
+    .main.soul .container{
+        padding: 30px 15px;
+    }
+    .soul-img{
+        width: 100%;
+        height: unset;
+        bottom: 0;
+    }
+    .input-box{
+        margin-bottom: 30px;
+        padding: 15px;
+        max-width: 320px;
+    }
+    .soul-title{
+        font-size: 32px;
+        line-height: 125%;
+        margin-bottom: 20px;
+    }
+    .table-title{
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+    .table-text{
+        font-size: 12px;
+    }
+    .table-button{
+        max-width: 250px;
+    }
+
+    .pifagor-table-item-title{
+        font-size: 11px;
+        line-height: 130%;
+        margin-bottom: 3px;
+    }
+    .pifagor-table-item-text{
+        font-size: 11px;
+        line-height: 130%;
+    }
+    .pifagor-table-item{
+        padding: 10px 5px;
+        word-break: break-word;
+    }
+}
+@media screen and (max-height: 720px){
+    .soul-img{
+        width: unset;
+        max-height: 490px;
     }
 }
 @media screen and (min-width: 1280px) and (max-width: 1440px) and (max-height: 1080px) {
