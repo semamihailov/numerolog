@@ -210,6 +210,7 @@ body{
 .pifagor-table {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 20px;
@@ -232,10 +233,15 @@ body{
     margin-right: auto;
 }
 .pifagor-table-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     word-break: break-word;
     padding: 15px 10px;
     box-shadow: inset 1px 1px 6px 0 rgba(87, 9, 77, 0.3);
     background: #e14686;
+
 }
 .pifagor-table-item.mark {
     background: rgba(255, 223, 237, 0.8);
@@ -273,8 +279,9 @@ body{
 .soul-wrapper{
     display: none;
 }
-
-
+.karm-table .pifagor-table-item-title{
+    margin-bottom: 0;
+}
 
 
 

@@ -196,8 +196,9 @@
         line-height: 130%;
     }
     .pifagor-table-item{
-        padding: 10px 5px;
+        padding: 10px 9px;
         word-break: break-word;
+        min-height: 78px;
     }
 }
 @media screen and (max-height: 720px){
