@@ -200,6 +200,10 @@
         word-break: break-word;
         min-height: 78px;
     }
+    .err-span{
+        font-size: 10px;
+        top: 2px;
+    }
 }
 @media screen and (max-height: 720px){
     .soul-img{
