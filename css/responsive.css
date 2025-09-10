@@ -1,3 +1,15 @@
+@media screen and (max-width: 1380px){
+    .compatibility-tabs{
+        display: grid;
+    }
+    .compatibility-tables .pifagor-table{
+        display: none;
+    }
+    .compatibility-tables .pifagor-table.active{
+        display: grid;
+    }
+}
+
 @media screen and (max-width: 1280px){
     .index-title{
         font-size: 38px;
@@ -52,8 +64,22 @@
     .table-button{
         max-width: 300px;
     }
+    .compatibility-img{
+        height: 90%;
+        max-height: 480px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
 }
 @media screen and (max-width: 1023px){
+    .compatibility-img{
+        height: 50%;
+        max-height: 300px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
     .container{
         max-width: 480px;
     }
@@ -204,11 +230,62 @@
         font-size: 10px;
         top: 2px;
     }
+    .main.compatibility .container{
+        padding: 30px 15px;
+    }
+    .compatibility-input-boxes{
+        flex-direction: column;
+    }
+    .compatibility-input-boxes .input-box{
+        margin-bottom: 15px;
+    }
+    .calc-soul-compatibility{
+        margin-top: 0;
+        max-width: 320px;
+        margin-bottom: 50px;
+        font-size: 16px;
+    }
+    .compatibility-tab{
+        padding: 10px;
+    }
+    .compatibility-title{
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+    .compatibility-tabs{
+        margin-bottom: 25px;
+    }
+    .compatibility-total{
+        font-size: 14px;
+    }
+    .compatibility-tab{
+        font-size: 14px;
+    }
+    .compatibility-input-boxes .name1,
+    .compatibility-input-boxes .name2{
+        margin-bottom: 10px;
+    }
 }
-@media screen and (max-height: 720px){
+@media screen and (max-height: 1080px){
+    .compatibility-img{
+        width: unset;
+        max-height: 600px;
+    }
+}
+@media screen and (max-height: 760px){
     .soul-img{
         width: unset;
         max-height: 490px;
+    }
+    .compatibility-img{
+        width: unset;
+        max-height: 490px;
+    }
+}
+@media screen and (max-height: 700px){
+    .compatibility-img{
+        width: unset;
+        max-height: 300px;
     }
 }
 @media screen and (min-width: 1280px) and (max-width: 1440px) and (max-height: 1080px) {

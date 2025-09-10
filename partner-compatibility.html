@@ -1,10 +1,392 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" type="image/x-icon" href="./favicon.png">
+    <title>Совместимость партнеров</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
 <body>
-<a href="index.html"> Назад на Главную</a>
+
+<main class="main compatibility">
+    <div class="container">
+        <div class="compatibility-input-boxes">
+            <div class="input-box">
+                <input type="text" class="input input-name name1" placeholder="Укажите имя">
+                <input type="text" class="input mask-date date1" placeholder="Дата рождения (дд.мм.гггг)">
+                <span class="err-span err1">Введите данные</span>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input input-name name2" placeholder="Укажите имя">
+                <input type="text" class="input mask-date date2" placeholder="Дата рождения (дд.мм.гггг)">
+                <span class="err-span err2">Введите данные</span>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="button calc-soul-compatibility">Рассчитать</a>
+        <img src="./images/soul-img.png" alt="" class="compatibility-img">
+        <div class="soul-wrapper">
+            <h1 class="soul-title">Совместимость партнеров</h1>
+
+            <div class="soul-content">
+                <h3 class="table-title compatibility-title">Квадрат Пифагора</h3>
+                <div class="compatibility-tabs">
+                    <button class="compatibility-tab compatibility-tab-1 active name1-past">Имя 1</button>
+                    <button class="compatibility-tab compatibility-tab-1 name2-past">Имя 2</button>
+                </div>
+                <div class="compatibility-tables">
+                    <div class="pifagor-table compatibility-table-1 active">
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Дата рождения</h4>
+                            <p class="pifagor-table-item-text" data-field="birth">?</p>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Тех.расклад</h4>
+                            <p class="pifagor-table-item-text" data-field="tech">?</p>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Число судьбы</h4>
+                            <p class="pifagor-table-item-text" data-field="destiny">?</p>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Темперамент</h4>
+                            <p class="pifagor-table-item-text" data-field="temperament">?</p>
+                        </div>
+
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Характер</h4>
+                            <p class="pifagor-table-item-text" data-field="character">?</p>
+                        </div>
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Здоровье</h4>
+                            <p class="pifagor-table-item-text" data-field="health">?</p>
+                        </div>
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Харизма</h4>
+                            <p class="pifagor-table-item-text" data-field="charisma">?</p>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Самореализация</h4>
+                            <p class="pifagor-table-item-text" data-field="realization">?</p>
+                        </div>
+
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Энергия</h4>
+                            <p class="pifagor-table-item-text" data-field="energy">?</p>
+                        </div>
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Логика</h4>
+                            <p class="pifagor-table-item-text" data-field="logic">?</p>
+                        </div>
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Ответственность</h4>
+                            <p class="pifagor-table-item-text" data-field="responsibility">?</p>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Семья</h4>
+                            <p class="pifagor-table-item-text" data-field="family">?</p>
+                        </div>
+
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Интерес</h4>
+                            <p class="pifagor-table-item-text" data-field="interest">?</p>
+                        </div>
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Труд</h4>
+                            <p class="pifagor-table-item-text" data-field="work">?</p>
+                        </div>
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Аналитика</h4>
+                            <p class="pifagor-table-item-text" data-field="analysis">?</p>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Привычки</h4>
+                            <p class="pifagor-table-item-text" data-field="habits">?</p>
+                        </div>
+
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Самооценка</h4>
+                            <p class="pifagor-table-item-text" data-field="assessment">?</p>
+                        </div>
+                        <div class="pifagor-table-item ">
+                            <h4 class="pifagor-table-item-title">Быт</h4>
+                            <p class="pifagor-table-item-text" data-field="life">?</p>
+                        </div>
+                        <div class="pifagor-table-item ">
+                            <h4 class="pifagor-table-item-title">Талант</h4>
+                            <p class="pifagor-table-item-text" data-field="talent">?</p>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Духовность</h4>
+                            <p class="pifagor-table-item-text" data-field="spirituality">?</p>
+                        </div>
+                    </div>
+                    <div class="pifagor-table compatibility-table-1">
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Дата рождения</h4>
+                            <p class="pifagor-table-item-text" data-field="birth-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Тех.расклад</h4>
+                            <p class="pifagor-table-item-text" data-field="tech-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Число судьбы</h4>
+                            <p class="pifagor-table-item-text" data-field="destiny-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Темперамент</h4>
+                            <p class="pifagor-table-item-text" data-field="temperament-2">?</p>
+                        </div>
+
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Характер</h4>
+                            <p class="pifagor-table-item-text" data-field="character-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Здоровье</h4>
+                            <p class="pifagor-table-item-text" data-field="health-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Харизма</h4>
+                            <p class="pifagor-table-item-text" data-field="charisma-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Самореализация</h4>
+                            <p class="pifagor-table-item-text" data-field="realization-2">?</p>
+                        </div>
+
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Энергия</h4>
+                            <p class="pifagor-table-item-text" data-field="energy-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Логика</h4>
+                            <p class="pifagor-table-item-text" data-field="logic-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Ответственность</h4>
+                            <p class="pifagor-table-item-text" data-field="responsibility-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Семья</h4>
+                            <p class="pifagor-table-item-text" data-field="family-2">?</p>
+                        </div>
+
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Интерес</h4>
+                            <p class="pifagor-table-item-text" data-field="interest-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Труд</h4>
+                            <p class="pifagor-table-item-text" data-field="work-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item mark">
+                            <h4 class="pifagor-table-item-title">Аналитика</h4>
+                            <p class="pifagor-table-item-text" data-field="analysis-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Привычки</h4>
+                            <p class="pifagor-table-item-text" data-field="habits-2">?</p>
+                        </div>
+
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Самооценка</h4>
+                            <p class="pifagor-table-item-text" data-field="assessment-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item ">
+                            <h4 class="pifagor-table-item-title">Быт</h4>
+                            <p class="pifagor-table-item-text" data-field="life-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item ">
+                            <h4 class="pifagor-table-item-title">Талант</h4>
+                            <p class="pifagor-table-item-text" data-field="talent-2">?</p>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Духовность</h4>
+                            <p class="pifagor-table-item-text" data-field="spirituality-2">?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="soul-content last">
+                <h3 class="table-title compatibility-title">Кармическая Матрица</h3>
+                <div class="compatibility-tabs">
+                    <button class="compatibility-tab compatibility-tab-2 active name1-past">Имя 1</button>
+                    <button class="compatibility-tab compatibility-tab-2 name2-past">Имя 2</button>
+                </div>
+                <div class="compatibility-tables">
+                    <div class="compatibility-table-2 pifagor-table karm-table active">
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Путь</h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Число достижений (ЧД)</h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Кармический узел (КУ)</h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Число судьбы и периоды жизни</h4>
+                        </div>
+
+
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Супер сила <span>(<span data-field="superpower">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">ЧД1 <span>(<span data-field="ch1">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">КУ1 <span>(<span data-field="ku1">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title" data-field="period1">?</h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Задача на жизнь <span>(<span data-field="lifeTask">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">ЧД2 <span>(<span data-field="ch2">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">КУ2 <span>(<span data-field="ku2">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title" data-field="period2">?</h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Энергия Года <span>(<span data-field="yearEnergy">(2)</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">ЧД3 <span>(<span data-field="ch3">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">КУ3 <span>(<span data-field="ku3">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title" data-field="period3">?</h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Предназначение <span>(<span data-field="yearEnergy">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">ЧД4 <span>(<span data-field="ch4">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">КУ4 <span>(<span data-field="ku4">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title" data-field="period4">?</h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title"></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title"></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">KУ5 <span>(<span data-field="ku5"></span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Число судьбы <span>(<span data-field="destiny">?</span>)</span></h4>
+                        </div>
+                    </div>
+                    <div class="compatibility-table-2 pifagor-table karm-table">
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Путь</h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Число достижений (ЧД)</h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Кармический узел (КУ)</h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Число судьбы и периоды жизни</h4>
+                        </div>
+
+
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Супер сила <span>(<span data-field="superpower-2">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">ЧД1 <span>(<span data-field="ch1-2">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">КУ1 <span>(<span data-field="ku1-2">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title" data-field="period1-2-2">?</h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Задача на жизнь <span>(<span data-field="lifeTask-2">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">ЧД2 <span>(<span data-field="ch2-2">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">КУ2 <span>(<span data-field="ku2-2">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title" data-field="period2-2">?</h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Энергия Года <span>(<span data-field="yearEnergy-2">(2)</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">ЧД3 <span>(<span data-field="ch3-2">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">КУ3 <span>(<span data-field="ku3-2">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title" data-field="period3-2">?</h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Предназначение <span>(<span data-field="yearEnergy-2">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">ЧД4 <span>(<span data-field="ch4-2">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">КУ4 <span>(<span data-field="ku4-2">?</span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title" data-field="period4-2">?</h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title"></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title"></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">KУ5 <span>(<span data-field="ku5-2"></span>)</span></h4>
+                        </div>
+                        <div class="pifagor-table-item">
+                            <h4 class="pifagor-table-item-title">Число судьбы <span>(<span data-field="destiny-2">?</span>)</span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="compatibility-total">
+                <p>Кармический урок:</p>
+                <p>Ядро отношений:</p>
+                <p>Причины конфликтов:</p>
+                <p>Уровень совместимости:</p>
+            </div>
+            <a href="https://t.me/julia_djayan" class="button table-button" target="_blank">получить расшифровку</a>
+        </div>
+    </div>
+</main>
+
 </body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.maskedinput.min.js"></script>
+<script src="./js/main.js"></script>
 </html>

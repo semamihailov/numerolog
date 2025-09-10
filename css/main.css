@@ -153,6 +153,13 @@ body{
     bottom: 0;
     right: 0;
 }
+.compatibility-img{
+    height: 90%;
+    max-height: 774px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 
 .input-box{
     position: relative;
@@ -209,6 +216,7 @@ body{
 }
 
 .pifagor-table {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -229,7 +237,7 @@ body{
     margin-bottom: 30px;
 }
 .table-button{
-    max-width: 365px;
+    max-width: 425px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -296,6 +304,103 @@ body{
 .karm-table{
     grid-template-rows: repeat(6,1fr);
 }
+
+
+.calc-soul-compatibility{
+    margin-bottom: 60px;
+    margin-top: -25px;
+    max-width: 365px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.compatibility-input-boxes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 45px;
+}
+.compatibility-input-boxes .input-box{
+    margin-left: unset;
+    margin-right: unset;
+}
+.compatibility-input-boxes .name1,
+.compatibility-input-boxes .name2{
+    margin-bottom: 20px;
+}
+.compatibility-input-boxes .date1,
+.compatibility-input-boxes .date2{
+    margin-bottom: 0;
+}
+.main.compatibility {
+    min-height: 100vh;
+    background: #730a41 url(../images/soul-bg.png) no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+.main.compatibility .container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1380px;
+    padding: 50px 15px;
+}
+
+.compatibility-tables{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+.compatibility-tabs {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15px;
+    margin-bottom: 40px;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.compatibility-tab {
+    border-radius: 100px;
+    padding: 15px 20px;
+    background: #ffa6cf;
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    color: #92027A;
+}
+.compatibility-tab.active{
+    color: #fff;
+    background: #c2035c;
+}
+.compatibility-total{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 130%;
+    color: #92027A;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
