@@ -25,7 +25,9 @@ $(function(){
         $(".soul-img").hide();
         $(".soul-wrapper").show();
         
-        let val = $(".input-birth").val(); // например "10.12.1989"
+        // let val = $(".input-birth").val(); // например "10.12.1989"
+        let val = "10.12.1989"; // например "10.12.1989" 23.10.1987
+        
         let digits = val.replace(/\D/g,''); // "10121989"
         
         let day = parseInt(digits.substr(0,2));
@@ -37,20 +39,21 @@ $(function(){
         let B = reduceToOne(A);
         let V = A - 2*parseInt(String(day)[0]);
         let G = sumDigits(String(V));
-       
-        console.log(A + "" + B + "" + V + "" + G);
 
         // выводим базовые
         $("[data-field=birth]").text(val);
         $("[data-field=tech]").text(A+" "+B+" "+V+" "+G);
         $("[data-field=destiny]").text(B);
 
+        
         // считаем частоты
         let allNums = digits + A + B + V + G;
         let counts = {};
         for(let i=1;i<=9;i++) counts[i]=0;
         allNums.split('').forEach(d=>counts[d]++);
 
+        console.log(counts)
+        
         $("[data-field=character]").text(repeatDigit(1,counts[1]));
         $("[data-field=energy]").text(repeatDigit(2,counts[2]));
         $("[data-field=talent]").text(repeatDigit(3,counts[3]));
@@ -60,6 +63,17 @@ $(function(){
         $("[data-field=charisma]").text(repeatDigit(7,counts[7]));
         $("[data-field=responsibility]").text(repeatDigit(8,counts[8]));
         $("[data-field=analysis]").text(repeatDigit(9,counts[9]));
+
+
+
+
+
+
+
+
+
+
+
 
         // --- Кармическая матрица ---
         let superpower = day<=22 ? day : day-22;

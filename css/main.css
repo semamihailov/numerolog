@@ -242,7 +242,7 @@ body{
     padding: 15px 10px;
     box-shadow: inset 1px 1px 6px 0 rgba(87, 9, 77, 0.3);
     background: #e14686;
-
+    min-height: 85px;
 }
 .pifagor-table-item.mark {
     background: rgba(255, 223, 237, 0.8);
@@ -292,7 +292,9 @@ body{
     transform: translateX(-50%);
     color: red;
 }
-
+.karm-table{
+    grid-template-rows: repeat(6,1fr);
+}
 
 
 
