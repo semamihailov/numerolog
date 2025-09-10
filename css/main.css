@@ -290,7 +290,8 @@ body{
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    color: red;
+    color: #000;
+    /*color: #92027A;*/
 }
 .karm-table{
     grid-template-rows: repeat(6,1fr);

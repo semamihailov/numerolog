@@ -15,18 +15,17 @@ $(function(){
     }
 
     $(".calc-soul").click(function(){
-        // if ($('.input-birth').val().trim().length === 0) {
-        //     $(".err-span").css("display", "block");
-        //     $(".soul-img").show();
-        //     $(".soul-wrapper").hide();
-        //     return;
-        // }
-        // $(".err-span").css("display", "none");
+        if ($('.input-birth').val().trim().length === 0) {
+            $(".err-span").css("display", "block");
+            $(".soul-img").show();
+            $(".soul-wrapper").hide();
+            return;
+        }
+        $(".err-span").css("display", "none");
         $(".soul-img").hide();
         $(".soul-wrapper").show();
         
-        // let val = $(".input-birth").val(); // например "10.12.1989"
-        let val = "10.12.1989"; // например "10.12.1989" 23.10.1987
+        let val = $(".input-birth").val(); // например "10.12.1989"
         
         let digits = val.replace(/\D/g,''); // "10121989"
         
@@ -51,12 +50,10 @@ $(function(){
         let counts = {};
         for(let i=1;i<=9;i++) counts[i]=0;
         allNums.split('').forEach(d=>counts[d]++);
-
-        console.log(counts)
         
         $("[data-field=character]").text(repeatDigit(1,counts[1]));
         $("[data-field=energy]").text(repeatDigit(2,counts[2]));
-        $("[data-field=talent]").text(repeatDigit(3,counts[3]));
+        $("[data-field=interest]").text(repeatDigit(3,counts[3]));
         $("[data-field=health]").text(repeatDigit(4,counts[4]));
         $("[data-field=logic]").text(repeatDigit(5,counts[5]));
         $("[data-field=work]").text(repeatDigit(6,counts[6]));
@@ -64,16 +61,17 @@ $(function(){
         $("[data-field=responsibility]").text(repeatDigit(8,counts[8]));
         $("[data-field=analysis]").text(repeatDigit(9,counts[9]));
 
+        $("[data-field=realization]").text(counts[1] + counts[4] + counts[7]);
+        $("[data-field=family]").text(counts[2] + counts[5] + counts[8]);
+        $("[data-field=habits]").text(counts[3] + counts[6] + counts[9]);
 
+        $("[data-field=assessment]").text(counts[1] + counts[2] + counts[3]);
+        $("[data-field=life]").text(counts[4] + counts[5] + counts[6]);
+        $("[data-field=talent]").text(counts[7] + counts[8] + counts[9]);
 
-
-
-
-
-
-
-
-
+        $("[data-field=temperament]").text(counts[3] + counts[5] + counts[7]);
+        $("[data-field=spirituality]").text(counts[1] + counts[5] + counts[9]);
+        
 
         // --- Кармическая матрица ---
         let superpower = day<=22 ? day : day-22;
@@ -94,11 +92,10 @@ $(function(){
         let ku4 = Math.abs(lifeTask-yearEnergy);
         let ku5 = Math.abs((ku1+ku2+ku3+ku4)-22);
 
-        let p1 = 36-B;
-        let p2 = p1+9;
-        let p3 = p2+9;
-        let periods = `0-${p1}, ${p1}-${p2}, ${p2}-${p3}, ${p3}+`;
-
+        let period1 = 36 - B;
+        let period2 = period1 + 9;
+        let period3 = period2 + 9;
+        
         $("[data-field=superpower]").text(superpower);
         $("[data-field=lifeTask]").text(lifeTask);
         $("[data-field=yearEnergy]").text(yearEnergy);
@@ -115,7 +112,10 @@ $(function(){
         $("[data-field=ku4]").text(ku4);
         $("[data-field=ku5]").text(ku5);
 
-        $("[data-field=periods]").text(periods);
+        $("[data-field=period1]").text("(" + "0 - " + period1 + " ЛЕТ)");
+        $("[data-field=period2]").text("(" + period1 + " -  " + period2 + " ЛЕТ)");
+        $("[data-field=period3]").text("(" + period2 + " -  " + period3 + " ЛЕТ)");
+        $("[data-field=period4]").text("(" + period3 + " -  " + "∞ ЛЕТ)");
     });
 
 });
