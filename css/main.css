@@ -225,6 +225,7 @@ body{
     margin-bottom: 20px;
 }
 .table-text{
+    line-height: 120%;
     max-width: 830px;
     margin-left: auto;
     margin-right: auto;
@@ -385,6 +386,9 @@ body{
     color: #92027A;
 }
 
+input:focus::placeholder {
+    color: transparent;
+}
 
 
 

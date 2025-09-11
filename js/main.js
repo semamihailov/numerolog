@@ -3,7 +3,6 @@
 $(function(){
     $(".mask-date").mask("99.99.9999");
 
-
     $(".compatibility-tab-1").on("click", function () {
         // снимаем класс active со всех табов
         $(".compatibility-tab-1").removeClass("active");

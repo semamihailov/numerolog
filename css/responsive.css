@@ -123,40 +123,54 @@
         max-height: 100vh;
     }
     .index-footer{
-        background: transparent;
-        width: calc(100% - 30px);
-        left: 15px;
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px); /* для iOS Safari */
+        background: #ff9bc6;
+        width: calc(100% + 30px);
+        left: -15px;
         position: absolute;
         margin: 0;
-        bottom: 15px;
+        bottom: 0;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
         backdrop-filter: unset;
         -webkit-backdrop-filter: unset;
+        border-radius: 10px 10px 0 0;
+        padding-bottom: 15px;
     }
     .index-footer-links{
-        border-radius: 0 12px 12px 12px;
-        backdrop-filter: blur(4px);
-        -webkit-backdrop-filter: blur(4px); /* для iOS Safari */
-        background: #ff9bc6;
+        width: 100%;
+        border-radius: 0;
+
         opacity: 0.75;
         padding: 5px 14px;
         column-gap: unset;
+        row-gap: 10px;
+        flex-direction: column;
+        padding: 0 15px;
     }
     .index-footer-link{
-        font-size: 10px;
+        font-size: 12px;
+        max-width: 260px;
+        text-align: center;
     }
     .index-socials{
+        max-width: unset;
+        width: 100%;
         margin: 0;
         border-radius: 12px 12px 12px 0;
         padding: 5px 8px;
-        column-gap: 6px;
+        column-gap: 10px;
         box-shadow: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 0;
     }
     .index-social img{
-        width: 25px;
-        height: 25px;
+        width: 35px;
+        height: 35px;
     }
     .index-text{
         width: 100%;
@@ -280,6 +294,24 @@
     .compatibility-img{
         width: unset;
         max-height: 490px;
+    }
+}
+@media screen and (max-height: 700px)  and (max-width: 400px){
+    .index-social img{
+        width: 25px;
+        height: 25px;
+    }
+    .index-socials{
+        padding: 10px 0;
+    }
+    .index-footer-links{
+        row-gap: 10px;
+    }
+    .index-footer{
+        padding-bottom: 10px;
+    }
+    .index-footer-link{
+        font-size: 10px;
     }
 }
 @media screen and (max-height: 700px){
