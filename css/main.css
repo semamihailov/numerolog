@@ -534,8 +534,19 @@ input:focus::placeholder {
 .money-title{
     margin-bottom: 35px;
 }
-
-
+.t-col_10 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.t-text_md{
+    font-size: 20px;
+    line-height: 1.55;
+}
 
 
 
