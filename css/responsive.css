@@ -200,7 +200,7 @@
         font-size: 14px;
     }
     .main.soul .container{
-        padding: 30px 15px;
+        padding: 45px 15px;
     }
     .soul-img{
         height: unset;
@@ -248,7 +248,7 @@
         top: 2px;
     }
     .main.compatibility .container{
-        padding: 30px 15px;
+        padding: 45px 15px;
     }
     .compatibility-input-boxes{
         flex-direction: column;
@@ -285,12 +285,14 @@
 }
 @media screen and (max-width: 768px){
     .prev-button{
-        font-size: 14px;
-        top: 7.5px;
+        font-size: 12px;
+        top: 15px;
         left: 10px;
+        line-height: 1;
+        column-gap: 6px;
     }
     .prev-button img{
-        height: 10px;
+        height: 8px;
     }
 }
 @media screen and (max-height: 1080px){
