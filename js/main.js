@@ -193,9 +193,86 @@ $(function(){
             $("[data-field=period4" + suffix + "]").text("(" + period3 + " -  " + "∞ ЛЕТ)");
         }
 
+        function computeCompatibility() {
+            // даты (нужно, чтобы дата1 и дата2 были jQuery-элементами с .val())
+            let val1 = date1.val().replace(/\D/g, ''); // например "24031988"
+            let val2 = date2.val().replace(/\D/g, ''); // "18021988"
+
+            // 1. Ядро отношений (А = Б + В)
+            function sumDigitsStr(str) {
+                return str.split('').reduce((s, d) => s + parseInt(d), 0);
+            }
+            function reduce22(n) {
+                return n > 22 ? n - 22 : n;
+            }
+
+            let B = reduce22(sumDigitsStr(val1)); // она
+            let V = reduce22(sumDigitsStr(val2)); // он
+            let A = reduce22(B + V);
+
+            $("[data-field=core]").text(A);
+
+            // 2. Кармический урок: "предназначение" у обоих
+            let purpose1 = parseInt($("[data-field=purpose]").text()) || 0;
+            let purpose2 = parseInt($("[data-field=purpose-2]").text()) || 0;
+            let karmicLesson = purpose1 + purpose2;
+            if (karmicLesson > 22) karmicLesson -= 22;
+
+            $("[data-field=karmicLesson]").text(karmicLesson);
+
+            // 3. Причины конфликтов: ЧД(1) у обоих
+            let ch1_1 = parseInt($("[data-field=ch1]").text()) || 0;
+            let ch1_2 = parseInt($("[data-field=ch1-2]").text()) || 0;
+            let conflicts = ch1_1 + ch1_2;
+            if (conflicts > 22) conflicts -= 22;
+
+            $("[data-field=conflicts]").text(conflicts);
+
+            // 4. Уровень совместимости
+            function calcMult(val) {
+                let d = parseInt(val.substr(0, 2));
+                let m = parseInt(val.substr(2, 2));
+                let y = parseInt(val.substr(4));
+                return d * m * y;
+            }
+
+            let mult1 = calcMult(val1); // она
+            let mult2 = calcMult(val2); // он
+
+            // привести к 6-значному числу
+            function toSixDigits(n) {
+                let s = String(n);
+                while (s.length < 6) s += "0";
+                return parseInt(s);
+            }
+
+            let B6 = toSixDigits(mult1);
+            let V6 = toSixDigits(mult2);
+
+            let compatVal = Math.abs(B6 - V6);
+            
+            
+            // сводим к однозначному числу
+            function digitRoot(n) {
+                let sum;
+                while (n > 9) {
+                    sum = String(n).split('').reduce((s, d) => s + parseInt(d), 0);
+                    n = sum;
+                }
+                return n;
+            }
+
+            let compatibilityLevel = digitRoot(compatVal);
+
+            $("[data-field=compatibilityLevel]").text(compatibilityLevel);
+        }
+        
         // вычисляем 
         computePerson(date1, "");
         computePerson(date2, "-2");
+
+        // --- Формулы для расчетов совместимости ---
+        computeCompatibility();
     });
 
 

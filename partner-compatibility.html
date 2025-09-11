@@ -14,15 +14,19 @@
 <body>
 
 <main class="main compatibility">
+    <a href="./index.html" class="prev-button">
+        <img src="./images/icons/left-icon.svg" alt="">
+        <span>Главная</span>
+    </a>
     <div class="container">
         <div class="compatibility-input-boxes">
             <div class="input-box">
-                <input type="text" class="input input-name name1" placeholder="Укажите имя">
+                <input type="text" class="input input-name name1" placeholder="Укажите имя" maxlength="15">
                 <input type="text" class="input mask-date date1" placeholder="Дата рождения (дд.мм.гггг)">
                 <span class="err-span err1">Введите данные</span>
             </div>
             <div class="input-box">
-                <input type="text" class="input input-name name2" placeholder="Укажите имя">
+                <input type="text" class="input input-name name2" placeholder="Укажите имя" maxlength="15">
                 <input type="text" class="input mask-date date2" placeholder="Дата рождения (дд.мм.гггг)">
                 <span class="err-span err2">Введите данные</span>
             </div>
@@ -272,7 +276,7 @@
                             <h4 class="pifagor-table-item-title" data-field="period3">?</h4>
                         </div>
                         <div class="pifagor-table-item">
-                            <h4 class="pifagor-table-item-title">Предназначение <span>(<span data-field="yearEnergy">?</span>)</span></h4>
+                            <h4 class="pifagor-table-item-title">Предназначение <span>(<span data-field="purpose">?</span>)</span></h4>
                         </div>
                         <div class="pifagor-table-item">
                             <h4 class="pifagor-table-item-title">ЧД4 <span>(<span data-field="ch4">?</span>)</span></h4>
@@ -348,7 +352,7 @@
                             <h4 class="pifagor-table-item-title" data-field="period3-2">?</h4>
                         </div>
                         <div class="pifagor-table-item">
-                            <h4 class="pifagor-table-item-title">Предназначение <span>(<span data-field="yearEnergy-2">?</span>)</span></h4>
+                            <h4 class="pifagor-table-item-title">Предназначение <span>(<span data-field="purpose-2">?</span>)</span></h4>
                         </div>
                         <div class="pifagor-table-item">
                             <h4 class="pifagor-table-item-title">ЧД4 <span>(<span data-field="ch4-2">?</span>)</span></h4>
@@ -375,10 +379,10 @@
                 </div>
             </div>
             <div class="compatibility-total">
-                <p>Кармический урок:</p>
-                <p>Ядро отношений:</p>
-                <p>Причины конфликтов:</p>
-                <p>Уровень совместимости:</p>
+                <p>Ядро отношений: <span data-field="core"></span></p>
+                <p>Кармический урок: <span data-field="karmicLesson"></span></p>
+                <p>Причины конфликтов: <span data-field="conflicts"></span></p>
+                <p>Уровень совместимости: <span data-field="compatibilityLevel"></span></p>
             </div>
             <a href="https://t.me/julia_djayan" class="button table-button" target="_blank">получить расшифровку</a>
         </div>

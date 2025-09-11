@@ -175,7 +175,7 @@ body{
 .input{
     text-align: center;
     width: 100%;
-    padding: 25px 0px;
+    padding: 25px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -390,7 +390,24 @@ input:focus::placeholder {
     color: transparent;
 }
 
+.prev-button{
+    position: absolute;
+    top: 50px;
+    left: 50px;
 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 8px;
+
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #92027A;
+}
 
 
 

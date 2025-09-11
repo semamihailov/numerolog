@@ -71,6 +71,9 @@
         bottom: 0;
         right: 0;
     }
+    .prev-button{
+        top: 25px;
+    }
 }
 @media screen and (max-width: 1023px){
     .compatibility-img{
@@ -193,16 +196,16 @@
         color: #fff;
     }
     .input{
-        padding: 12px 0;
+        padding: 12px 10px;
         font-size: 14px;
     }
     .main.soul .container{
         padding: 30px 15px;
     }
     .soul-img{
-        width: 100%;
         height: unset;
         bottom: 0;
+        max-height: 70%;
     }
     .input-box{
         margin-bottom: 30px;
@@ -280,6 +283,16 @@
         margin-bottom: 10px;
     }
 }
+@media screen and (max-width: 768px){
+    .prev-button{
+        font-size: 14px;
+        top: 7.5px;
+        left: 10px;
+    }
+    .prev-button img{
+        height: 10px;
+    }
+}
 @media screen and (max-height: 1080px){
     .compatibility-img{
         width: unset;
@@ -294,6 +307,11 @@
     .compatibility-img{
         width: unset;
         max-height: 490px;
+    }
+}
+@media screen and (max-width: 425px){
+    .soul-img{
+        width: 100%;
     }
 }
 @media screen and (max-height: 700px)  and (max-width: 400px){
