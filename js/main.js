@@ -3,6 +3,39 @@
 $(function(){
     $(".mask-date").mask("99.99.9999");
 
+
+    let inputMoney = $(".input-money");
+    inputMoney.mask("9999");
+    let imgMoney = $(".money-img");
+    let wrapperMoney = $(".money-wrapper");
+    let errMoney = $(".err-span");
+
+    $(".calc-money").click(function(){
+        if (inputMoney.val().trim().length === 0) {
+            errMoney.css("display", "block");
+            imgMoney.show();
+            wrapperMoney.hide();
+            return;
+        }
+        errMoney.css("display", "none");
+        imgMoney.hide();
+        wrapperMoney.show();
+
+        let val = inputMoney.val(); // например "10.12.1989"
+
+        let digits = val.replace(/\D/g,''); // "10121989"
+
+        console.log(digits);
+
+        $("[data-field=num1]").text();
+        $("[data-field=num2]").text();
+        $("[data-field=num3]").text();
+        $("[data-field=num4]").text();
+        $("[data-field=num5]").text();
+        $("[data-field=num6]").text();
+    });
+
+
     $(".compatibility-tab-1").on("click", function () {
         // снимаем класс active со всех табов
         $(".compatibility-tab-1").removeClass("active");

@@ -74,6 +74,12 @@
     .prev-button{
         top: 25px;
     }
+    .money-texts{
+        margin: 60px 0;
+    }
+    .money-text {
+        grid-template-columns: 1fr 2.5fr;
+    }
 }
 @media screen and (max-width: 1023px){
     .compatibility-img{
@@ -282,6 +288,52 @@
     .compatibility-input-boxes .name2{
         margin-bottom: 10px;
     }
+    .money-img{
+        left: 50%;
+        transform: translateX(-50%);
+        height: 62%;
+    }
+    .main.money .container{
+        max-width: 480px;
+    }
+    .money-title{
+        margin-bottom: 30px;
+    }
+    .money-texts{
+        margin: 40px 0;
+    }
+    .money-triangle{
+        margin-top: 40px;
+        width: 100%;
+    }
+    .money-head-text{
+        margin-top: 40px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .money-text{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .money-text:not(:last-child){
+        margin-bottom: 30px;
+    }
+    .money-text-title{
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+    .money-text-p{
+        font-size: 18px;
+    }
+    .money-num{
+        font-size: 75px;
+    }
+    .num1{
+        top: 10px;
+    }
+    .num4{
+        bottom: 10px;
+    }
 }
 @media screen and (max-width: 768px){
     .prev-button{
@@ -293,6 +345,38 @@
     }
     .prev-button img{
         height: 8px;
+    }
+    .money-triangle{
+        height: 360px;
+        width: 340px;
+    }
+    .triangle{
+        max-width: 250px;
+    }
+    .money-num{
+        font-size: 60px;
+    }
+    .num1{
+        top: 10px;
+    }
+    .num2{
+        right: 65px;
+        top: 30%;
+    }
+    .num3{
+        right: 0;
+        bottom: 60px;
+    }
+    .num4{
+        bottom: 10px;
+    }
+    .num5{
+        left: 0;
+        bottom: 60px;
+    }
+    .num6{
+        left: 65px;
+        top: 30%;
     }
 }
 @media screen and (max-height: 1080px){

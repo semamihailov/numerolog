@@ -409,6 +409,154 @@ input:focus::placeholder {
     color: #92027A;
 }
 
+.money-img{
+    position: absolute;
+    left: -65px;
+    bottom: 0;
+    max-height: 751px;
+    height: 75%;
+}
+.input-money{
+    font-size: 24px;
+}
+.input-money::placeholder{
+    font-size: 24px;
+}
+.money-wrapper{
+    display: none;
+}
+.money-texts {
+    margin-top: 80px;
+    margin-bottom: 90px;
+}
+
+.money-text {
+    display: grid;
+    grid-template-columns: 1.2fr 4fr;
+    column-gap: 20px;
+}
+.money-text:not(:last-child){
+    margin-bottom: 45px;
+}
+.money-text-title {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #92027A;
+}
+
+.money-text-p {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 32px;
+    color: #92027A;
+}
+.money-head-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #92027A;
+    max-width: 953px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+.main.money{
+    min-height: 100vh;
+    background: #730a41 url("../images/soul-bg.png") no-repeat center;
+    background-size: cover;
+
+    position: relative;
+}
+.main.money .container{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1205px;
+    padding: 50px 15px;
+}
+
+.main.money .input-box{
+    margin-bottom: 0 !important;
+}
+
+.money-triangle {
+    position: relative;
+    height: 460px;
+    width: 530px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.triangle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.money-num{
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 86px;
+    line-height: 100%;
+    text-align: center;
+    color: #ff71a9;
+
+    position: absolute;
+}
+.num1{
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+.num2{
+    right: 100px;
+    top: 30%;
+}
+.num3{
+    right: 0;
+    bottom: 85px;
+}
+.num4{
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+.num5{
+    left: 0;
+    bottom: 85px;
+}
+.num6{
+    left: 100px;
+    top: 30%;
+}
+.money-title{
+    margin-bottom: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
