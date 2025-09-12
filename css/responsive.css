@@ -20,16 +20,7 @@
         padding: 25px;
         row-gap: 20px;
     }
-    .index-text{
-        font-family: var(--font-family);
-        font-weight: 800;
-        font-size: 12px;
-        text-align: center;
-        color: #92027A;
-        max-width: 332px;
-        line-height: 1.2;
-        margin: 0 auto;
-    }
+
     .main.index{
         padding: 80px 70px 0;
     }
@@ -82,6 +73,16 @@
     }
 }
 @media screen and (max-width: 1023px){
+    .index-text{
+        font-family: var(--font-family);
+        font-weight: 800;
+        font-size: 12px;
+        text-align: center;
+        color: #92027A;
+        max-width: 332px;
+        line-height: 1.2;
+        margin: 0 auto;
+    }
     .compatibility-img{
         height: 50%;
         max-height: 300px;

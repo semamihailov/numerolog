@@ -411,7 +411,7 @@ input:focus::placeholder {
 
 .money-img{
     position: absolute;
-    left: -65px;
+    right: 0;
     bottom: 0;
     max-height: 751px;
     height: 75%;
@@ -522,6 +522,7 @@ input:focus::placeholder {
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
+    color: #c2035c;
 }
 .num5{
     left: 0;

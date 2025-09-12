@@ -10,6 +10,13 @@ $(function(){
     let wrapperMoney = $(".money-wrapper");
     let errMoney = $(".err-span");
 
+    function reduceToDigit(num) {
+        while (num > 9) {
+            num = num.toString().split("").reduce((a, b) => a + +b, 0);
+        }
+        return num;
+    }
+
     $(".calc-money").click(function(){
         if (inputMoney.val().trim().length === 0) {
             errMoney.css("display", "block");
@@ -21,19 +28,30 @@ $(function(){
         imgMoney.hide();
         wrapperMoney.show();
 
-        let val = inputMoney.val(); // например "10.12.1989"
+        let val = inputMoney.val(); // например "1394"
+        let digits = val.replace(/\D/g,'').split("").map(Number);
 
-        let digits = val.replace(/\D/g,''); // "10121989"
+        if (digits.length < 4) {
+            alert("Введите минимум 4 цифры");
+            return;
+        }
 
-        console.log(digits);
+        let A = digits[2]; // третья цифра
+        let B = reduceToDigit(digits[1] + digits[2]); // 2+3
+        let C = reduceToDigit(digits[2] + digits[3]); // 3+4
+        let D = reduceToDigit(A + B);
+        let E = reduceToDigit(A + C);
+        let F = reduceToDigit(B + C);
 
-        $("[data-field=num1]").text();
-        $("[data-field=num2]").text();
-        $("[data-field=num3]").text();
-        $("[data-field=num4]").text();
-        $("[data-field=num5]").text();
-        $("[data-field=num6]").text();
+        // выводим
+        $("[data-field=num1]").text(A);
+        $("[data-field=num2]").text(B);
+        $("[data-field=num3]").text(C);
+        $("[data-field=num4]").text(D);
+        $("[data-field=num5]").text(E);
+        $("[data-field=num6]").text(F);
     });
+
 
 
     $(".compatibility-tab-1").on("click", function () {
@@ -181,6 +199,10 @@ $(function(){
             $("[data-field=temperament" + suffix + "]").text((counts[3]||0) + (counts[5]||0) + (counts[7]||0));
             $("[data-field=spirituality" + suffix + "]").text((counts[1]||0) + (counts[5]||0) + (counts[9]||0));
 
+
+
+
+
             // --- Кармическая матрица ---
             let superpower = day <= 22 ? day : day - 22;
             let lifeTask = month;
@@ -189,16 +211,24 @@ $(function(){
             let purpose = superpower + lifeTask + yearEnergy;
             if (purpose > 22) purpose -= 22;
 
-            let ch1 = superpower + lifeTask;
-            let ch2 = superpower + yearEnergy;
-            let ch3 = ch1 + ch2;
-            let ch4 = lifeTask + yearEnergy;
+            function normalize(num) {
+                let result = num % 22;
+                return result === 0 ? 22 : result;
+            }
 
-            let ku1 = Math.abs(superpower - lifeTask);
-            let ku2 = Math.abs(superpower - yearEnergy);
-            let ku3 = Math.abs(ku1 - ku2);
-            let ku4 = Math.abs(lifeTask - yearEnergy);
-            let ku5 = Math.abs((ku1 + ku2 + ku3 + ku4) - 22);
+            let ch1 = normalize(superpower + lifeTask);
+            let ch2 = normalize(superpower + yearEnergy);
+            let ch3 = normalize(ch1 + ch2);
+            let ch4 = normalize(lifeTask + yearEnergy);
+
+
+
+            let ku1 = Math.abs(superpower-lifeTask);
+            let ku2 = Math.abs(superpower-yearEnergy);
+            let ku3 = Math.abs(ku1-ku2);
+            let ku4 = Math.abs(lifeTask-yearEnergy);
+
+            let ku5 = normalize(ku1+ku2+ku3+ku4);
 
             let period1 = 36 - B;
             let period2 = period1 + 9;
@@ -376,16 +406,24 @@ $(function(){
         let purpose = superpower+lifeTask+yearEnergy;
         if(purpose>22) purpose-=22;
 
-        let ch1 = superpower+lifeTask;
-        let ch2 = superpower+yearEnergy;
-        let ch3 = ch1+ch2;
-        let ch4 = lifeTask+yearEnergy;
+        function normalize(num) {
+            let result = num % 22;
+            return result === 0 ? 22 : result;
+        }
+
+        let ch1 = normalize(superpower + lifeTask);
+        let ch2 = normalize(superpower + yearEnergy);
+        let ch3 = normalize(ch1 + ch2);
+        let ch4 = normalize(lifeTask + yearEnergy);
+
+
 
         let ku1 = Math.abs(superpower-lifeTask);
         let ku2 = Math.abs(superpower-yearEnergy);
         let ku3 = Math.abs(ku1-ku2);
         let ku4 = Math.abs(lifeTask-yearEnergy);
-        let ku5 = Math.abs((ku1+ku2+ku3+ku4)-22);
+
+        let ku5 = normalize(ku1+ku2+ku3+ku4);
 
         let period1 = 36 - B;
         let period2 = period1 + 9;
